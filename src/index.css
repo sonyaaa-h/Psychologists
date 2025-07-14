@@ -5,11 +5,13 @@
   --light-green: rgba(84, 190, 150, 0.2);
   --hover: #36a379;
   --white:  #fbfbfb;
+  --light-grey:  rgba(25, 26, 21, 0.5);
 }
 
 body {
-  font-family: sans-serif;
+  font-family:  "Inter", sans-serif;
   line-height: 1.5;
+  background-color: var(--white);
 }
 
 h1,

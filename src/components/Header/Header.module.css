@@ -1,0 +1,63 @@
+.header {
+    padding: 24px 128px;
+    border-bottom: 1px solid rgba(25, 26, 21, 0.2);
+}
+
+.headerWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navLink {
+    display: flex;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    margin-right: 130px;
+}
+
+.dot {
+    font-weight: 500;
+}
+
+.span {
+    font-weight: 600;
+    color: var(--black);
+}
+
+.navBtn {
+    display: flex;
+    gap: 8px;
+}
+
+.logIn {
+    border: 1px solid rgba(25, 26, 21, 0.2);
+    border-radius: 30px;
+    padding: 14px 39px;
+    height: 48px;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--black);
+}
+
+.register {
+    border-radius: 30px;
+    padding: 14px 40px;
+    width: 171px;
+    height: 48px;
+    background-color: var(--accent);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--white);
+}

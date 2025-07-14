@@ -1,0 +1,124 @@
+.heroWrap {
+    display: flex;
+    gap: 125px;
+    /* margin-top: 78px; */
+    padding-top: 78px;
+    /* padding-bottom: 100px; */
+    justify-content: center;
+    /* background-image: url("../../assets//icons/ellipse.svg");
+    max-width: 1440px;
+    margin: 0 auto; */
+}
+
+.titleWrap {
+    width: 595px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 1.025;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.titleSpan {
+    font-style: italic;
+    color: var(--accent);
+}
+
+.heroText {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.33333;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    width: 500px;
+    margin-bottom: 40px;
+}
+
+.startLink {
+    border-radius: 30px;
+    padding: 18px 50px;
+    width: 235px;
+    height: 60px;
+    background-color: var(--accent);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--white);
+}
+
+.startsvg {
+    width: 15px;
+    height: 17px;
+}
+
+.heroImg {
+    position: relative;
+    border-radius: 10px;
+    width: 464px;
+    height: 526px;
+    background-image: url("../../assets/images/hero.jpg");
+}
+
+.usersImg {
+    position: absolute;
+    top: 38px;
+    right: -44px;
+}
+
+.questionImg {
+    position: absolute;
+    top: 185px;
+    left: -39px;
+}
+
+.infoWrap {
+    position: absolute;
+    top: 333px;
+    right: 254px;
+
+    display: flex;
+    gap: 16px;
+
+    border-radius: 20px;
+    background-color: var(--accent);
+    padding: 31px;
+    width: 311px;
+}
+
+.checkWrap {
+    border-radius: 13px;
+    width: 54px;
+    height: 54px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkImg {
+    width: 30px;
+    height: 30px;
+    /* padding: 12px; */
+}
+
+.infoText {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--light-grey);
+}
+
+.infoCount {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--white);
+}

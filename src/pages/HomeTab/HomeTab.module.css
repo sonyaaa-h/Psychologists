@@ -1,0 +1,8 @@
+.wrapper {
+    background-image: url("../../assets/icons/ellipse.svg");
+    height: calc(100vh - 97px);
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

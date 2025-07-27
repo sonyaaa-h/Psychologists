@@ -14,6 +14,7 @@ const Header = () => {
     const [loginFormOpen, setLoginFormOpen] = useState(false);
     const [registerFormOpen, setRegisterFormOpen] = useState(false);
     const [user] = useAuthState(auth);
+    
 
     const handleLogout = async () => {
         try {
@@ -36,7 +37,7 @@ const Header = () => {
                     <Navigation />
                 </div>
                 {user ? (
-                    <button onClick={handleLogout}>Log out</button>
+                    <button onClick={handleLogout} className={s.logout}>Log out</button>
                 ) : (
                     <div className={s.navBtn}>
                         <button

@@ -1,0 +1,151 @@
+.itemWrap {
+    display: flex;
+    gap: 24px;
+    width: 1184px;
+    background-color: var(--white);
+    border-radius: 24px;
+    padding: 24px;
+}
+
+.avatarWrap {
+    position: relative;
+    border: 2px solid rgba(84, 190, 150, 0.2);
+    height: 120px;
+    width: 120px;
+    border-radius: 30px;
+}
+
+.avatar {
+    border-radius: 15px;
+    width: 96px;
+    height: 96px;
+    margin: 12px;
+}
+
+.isOnline {
+    position: absolute;
+    top: 9px;
+    right: 14px;
+}
+
+.infoWrap {
+    width: 992px;
+}
+
+.titleWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.nameWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.psychologist {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #8a8a89;
+}
+
+.name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: #191a15;
+}
+
+.filterInfoWrap {
+    display: flex;
+    gap: 28px;
+    height: 24px;
+}
+
+.filterPriceWrap {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.ratingWrap {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.rating {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #191a15;
+}
+
+.divider {
+    width: 1px;
+    height: 16px;
+    background-color: rgba(25, 26, 21, 0.2);
+}
+
+.price {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #191a15;
+}
+
+.span {
+    color: #38cd3e;
+}
+
+.heartBtn {
+    background-color: transparent;
+}
+
+.star {
+    width: 16px;
+    height: 16px;
+}
+
+.infoList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 4px;
+    margin-bottom: 24px;
+}
+
+.infoItem {
+    border-radius: 24px;
+    padding: 8px 16px;
+    background: #f3f3f3;
+}
+
+.infoTitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #8a8a89;
+}
+
+.infoSpan {
+    color: #191a15;
+}
+
+.about {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(25, 26, 21, 0.5);
+    margin-bottom: 14px;
+}
+
+.loadMore {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: underline;
+    color: #191a15;
+    background-color: transparent;
+}

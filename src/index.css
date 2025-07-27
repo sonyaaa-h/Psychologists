@@ -11,7 +11,7 @@
 body {
   font-family:  "Inter", sans-serif;
   line-height: 1.5;
-  background-color: var(--white);
+  background-color: #f3f3f3;
 }
 
 h1,
@@ -38,6 +38,8 @@ a {
 button {
   border: none;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 img {

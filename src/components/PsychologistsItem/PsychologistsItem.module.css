@@ -13,13 +13,16 @@
     height: 120px;
     width: 120px;
     border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .avatar {
     border-radius: 15px;
     width: 96px;
     height: 96px;
-    margin: 12px;
 }
 
 .isOnline {

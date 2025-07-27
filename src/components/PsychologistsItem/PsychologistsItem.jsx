@@ -1,13 +1,19 @@
 import starSvg from "../../assets/icons/star.svg";
 import heartSvg from "../../assets/icons/heart.svg";
 import onlineSvg from "../../assets/icons/online.svg";
+import isFavoriteSvg from "../../assets/icons/liked.svg"
 import s from "./PsychologistsItem.module.css";
 import { useState } from "react";
 import ReadMore from "../ReadMore/ReadMore";
+import { useFavorites } from "./useFavorites";
 
 const PsychologistsItem = ({ psychologist }) => {
     console.log(psychologist);
     const [readMore, setReadMore] = useState(false);
+
+    const { favorites, toggleFavorite } = useFavorites();
+
+    const isFavorite = favorites.includes(psychologist.id);
 
     return (
         <li className={s.itemWrap}>
@@ -37,8 +43,15 @@ const PsychologistsItem = ({ psychologist }) => {
                                 <span className={s.span}>{psychologist.price_per_hour}$</span>
                             </p>
                         </div>
-                        <button className={s.heartBtn}>
-                            <img src={heartSvg} alt="not a favorite" />
+                        <button
+                            className={s.heartBtn}
+                            onClick={() => toggleFavorite(psychologist.id)}
+                        >
+                            {isFavorite ? (
+                                <img src={isFavoriteSvg} alt="is favorite" />
+                            ) : (
+                                <img src={heartSvg} alt="not a favorite" />
+                            )}
                         </button>
                     </div>
                 </div>

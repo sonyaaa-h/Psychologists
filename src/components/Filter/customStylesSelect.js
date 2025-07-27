@@ -31,10 +31,16 @@ const customStyles = {
         ...provided,
         backgroundColor: "transparent",
         color: state.isSelected
-            ? "#191a15" 
+            ? "#191a15"
             : state.isFocused
                 ? "#191a15"
-                : "rgba(25, 26, 21, 0.3)", 
+                : "rgba(25, 26, 21, 0.3)",
+        ":active": {
+            backgroundColor: "transparent",
+        },
+        ":hover": {
+            backgroundColor: "transparent", 
+        },
         fontSize: "16px",
         fontWeight: 400,
         cursor: "pointer",
@@ -47,11 +53,16 @@ const customStyles = {
         transition: "transform 0.3s ease",
         transform: state.selectProps.menuIsOpen ? "rotate(180deg)" : "rotate(0deg)",
         ":hover": {
-            color: "#fbfbfb", 
+            color: "#fbfbfb",
         },
     }),
     indicatorSeparator: () => ({
         display: "none",
+    }),
+    menuList: (provided) => ({
+        ...provided,
+        maxHeight: "none",
+        overflowY: "visible",
     }),
 };
 

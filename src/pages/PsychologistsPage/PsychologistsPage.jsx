@@ -16,7 +16,11 @@ const PsychologistsPage = () => {
         const callback = (snapshot) => {
             const data = snapshot.val();
             if (data) {
-                const dataArray = Object.values(data);
+                const dataArray = Object.entries(data).map(([id, item]) => ({
+                    id,
+                    ...item,
+                }));
+
                 setPsychologists(dataArray);
             } else {
                 setPsychologists([]);

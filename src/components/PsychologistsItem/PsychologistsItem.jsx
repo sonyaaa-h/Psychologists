@@ -85,7 +85,7 @@ const PsychologistsItem = ({ psychologist }) => {
                 </ul>
                 <p className={s.about}>{psychologist.about}</p>
                 {readMore ? (
-                    <ReadMore reviews={psychologist.reviews} />
+                    <ReadMore psychologist={psychologist} />
                 ) : (
                     <button className={s.loadMore} onClick={() => setReadMore(true)}>
                         Read more

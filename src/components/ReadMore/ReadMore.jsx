@@ -1,7 +1,12 @@
+import { useState } from "react";
 import straSvg from "../../assets/icons/star.svg";
 import s from "./ReadMore.module.css";
+import PopUp from "../PopUp/PopUp";
 
-const ReadMore = ({ reviews }) => {
+const ReadMore = ({ psychologist }) => {
+    const [openModal, setOpenModal] = useState(false);
+    const { reviews } = psychologist;
+
     return (
         <div className={s.readMoreWrap}>
             <ul className={s.reviewsList}>
@@ -25,7 +30,15 @@ const ReadMore = ({ reviews }) => {
                     );
                 })}
             </ul>
-            <button className={s.makeAp}>Make an appointment</button>
+            <button className={s.makeAp} onClick={() => setOpenModal(true)}>
+                Make an appointment
+            </button>
+            {openModal && (
+                <PopUp
+                    onClose={() => setOpenModal(false)}
+                    psychologist={psychologist}
+                />
+            )}
         </div>
     );
 };

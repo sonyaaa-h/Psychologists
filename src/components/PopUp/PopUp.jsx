@@ -1,9 +1,15 @@
 import { useEffect } from "react";
+import { getAuth } from "firebase/auth";
+import { toast } from "react-hot-toast";
+
 import closeSvg from "../../assets/icons/close.svg";
 import s from "./PopUp.module.css";
 import PopUpForm from "../PopUpForm/PopUpForm";
 
 const PopUp = ({ onClose, psychologist }) => {
+    const auth = getAuth();
+    const user = auth.currentUser;
+
     useEffect(() => {
         const handleEsc = (e) => {
             if (e.key === "Escape") onClose();
@@ -18,6 +24,12 @@ const PopUp = ({ onClose, psychologist }) => {
         }
     };
 
+    useEffect(() => {
+        if (!user) {
+            toast.error("You need to be logged in to make an appointment.");
+        }
+    }, [user]);
+
     return (
         <div className={s.backdrop} onClick={handleBackdropClick}>
             <div className={s.modal}>
@@ -25,7 +37,7 @@ const PopUp = ({ onClose, psychologist }) => {
                     <img src={closeSvg} alt="close" />
                 </button>
                 <div className={s.titleWrap}>
-                    <h2 className={s.title}>Make an appointment with a psychologists</h2>
+                    <h2 className={s.title}>Make an appointment with a psychologist</h2>
                     <p className={s.infoText}>
                         You are on the verge of changing your life for the better. Fill out
                         the short form below to book your personal appointment with a
@@ -34,16 +46,21 @@ const PopUp = ({ onClose, psychologist }) => {
                     </p>
                 </div>
                 <div className={s.psychologistWrap}>
-                    <img src={psychologist.avatar_url} alt={psychologist.name} className={s.foto}/>
+                    <img src={psychologist.avatar_url} alt={psychologist.name} className={s.foto} />
                     <div className={s.nameWrap}>
-                        <p className={s.psychologistText}>Your psychologists</p>
+                        <p className={s.psychologistText}>Your psychologist</p>
                         <p className={s.psychologistName}>{psychologist.name}</p>
                     </div>
                 </div>
-                <PopUpForm/>
-                <button className={s.sendBtn}>Send</button>
+
+                {user ? (
+                    <PopUpForm onClose={onClose} />
+                ) : (
+                    <p className={s.loginMessage}>Please log in to book an appointment.</p>
+                )}
             </div>
         </div>
     );
 };
+
 export default PopUp;

@@ -12,10 +12,12 @@
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
     "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
     "firebase": "^11.10.0",
     "formik": "^2.4.6",
     "modern-normalize": "^3.0.1",
     "react": "^19.0.0",
+    "react-datepicker": "^8.4.0",
     "react-dom": "^19.0.0",
     "react-firebase-hooks": "^5.1.1",
     "react-hook-form": "^7.60.0",

@@ -51,11 +51,16 @@
     padding: 14px 32px;
     width: 227px;
     height: 48px;
-    background: #54be96;
+    background-color: #54be96;
 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: -0.01em;
     color: #fbfbfb;
+    transition: background-color 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.makeAp:hover, .makeAp:focus {
+    background-color: var(--hover);
 }
